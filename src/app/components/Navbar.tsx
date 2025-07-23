@@ -2,8 +2,26 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './Navbar.module.css';
+
+const LogoPlaceholder = () => (
+  <div style={{
+    width: '80px',
+    height: '80px', 
+    backgroundColor: '#ff4c4c',
+    borderRadius: '50%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontFamily: 'var(--font-bebas-neue)',
+    fontSize: '1.2rem',
+    fontWeight: 'bold',
+    color: 'white',
+    letterSpacing: '1px'
+  }}>
+    K
+  </div>
+);
 
 const InstagramIcon = () => (
   <a href="https://www.instagram.com/klandestino_bbs" target="_blank" rel="noopener noreferrer" className={styles.instagramIcon}>
@@ -59,7 +77,7 @@ const Navbar = () => {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.brand}>
-          <Image src="/logo.jpg" alt="Klandestino Logo" width={80} height={80} priority />
+          <LogoPlaceholder />
         </Link>
 
         {/* Mobile-only Instagram Icon */}

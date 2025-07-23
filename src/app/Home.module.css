@@ -342,8 +342,115 @@
   }
 }
 
+/* --- Video Placeholder Styles --- */
+.videoPlaceholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 2px solid #ff4c4c;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.videoPlaceholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 76, 76, 0.1) 50%, transparent 70%);
+  z-index: 1;
+}
+
+.videoPlaceholder:hover {
+  border-color: #ff6666;
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 76, 76, 0.3);
+}
+
+.playIcon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 76, 76, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 15px;
+  z-index: 2;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.videoPlaceholder:hover .playIcon {
+  background: #ff4c4c;
+  transform: scale(1.1);
+}
+
+.videoPlaceholder p {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.1rem;
+  color: #cccccc;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 1px;
+  z-index: 2;
+  position: relative;
+}
+
+.heroPlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.heroVideo {
+  width: 100%;
+  height: 100%;
+}
+
+.heroVideo .videoPlaceholder {
+  border-radius: 0;
+  border: none;
+  min-height: 100vh;
+}
+
+.manifestoImage .videoPlaceholder {
+  min-height: 400px;
+}
+
+.featuredJCReyesWrapper .videoPlaceholder {
+  min-height: 350px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 @media (min-width: 1024px) {
   .galleryGrid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .playIcon {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+  
+  .videoPlaceholder p {
+    font-size: 1.3rem;
   }
 }

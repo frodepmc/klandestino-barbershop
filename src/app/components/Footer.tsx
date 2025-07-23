@@ -1,6 +1,24 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './Footer.module.css';
+
+const LogoPlaceholder = () => (
+  <div style={{
+    width: '100px',
+    height: '100px', 
+    backgroundColor: '#ff4c4c',
+    borderRadius: '50%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontFamily: 'var(--font-bebas-neue)',
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    color: 'white',
+    letterSpacing: '1px'
+  }}>
+    K
+  </div>
+);
 
 const InstagramIcon = () => (
   <svg 
@@ -27,7 +45,7 @@ const Footer = () => {
       <div className={styles.footerContent}>
         <div className={styles.footerColumn}>
           <Link href="/" className={styles.brand}>
-            <Image src="/logo.jpg" alt="Klandestino Logo" width={100} height={100} />
+            <LogoPlaceholder />
           </Link>
           <p className={styles.tagline}>El estilo no se encuentra, se crea.</p>
         </div>
