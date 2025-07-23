@@ -6,8 +6,8 @@ const nextConfig = {
     unoptimized: true
   },
   // Configuración para GitHub Pages
-  basePath: process.env.NODE_ENV === 'production' ? '' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
+  basePath: '/klandestino-barbershop',
+  assetPrefix: '/klandestino-barbershop',
 };
 
 export default nextConfig;
