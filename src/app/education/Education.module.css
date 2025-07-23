@@ -1,0 +1,741 @@
+/* --- Mobile First Styles --- */
+.educationPage {
+  min-height: 100vh;
+}
+
+/* --- Hero Section --- */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05));
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-family: var(--font-bebas-neue);
+  font-size: 3.5rem;
+  color: var(--accent-color);
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pageSubtitle {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.5rem;
+  color: #ccc;
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
+}
+
+.heroDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f5f5f5;
+  margin-bottom: 40px;
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 12px;
+}
+
+.statNumber {
+  font-family: var(--font-bebas-neue);
+  font-size: 2rem;
+  color: var(--accent-color);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
+
+/* --- Section Styles --- */
+.sectionTitle {
+  font-family: var(--font-bebas-neue);
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+/* --- Features Section --- */
+.features {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.featureCard {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
+  border-color: var(--accent-color);
+}
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--accent-color);
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.featureCard h3 {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.featureCard p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* --- Courses Section --- */
+.courses {
+  padding: 80px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.courseCard {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.courseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.courseTitle {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin: 0;
+  letter-spacing: 0.5px;
+  flex: 1;
+}
+
+.courseLevel {
+  background-color: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: var(--accent-color);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.courseDescription {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.courseDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.courseDetail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f5f5f5;
+  font-size: 0.9rem;
+}
+
+.courseDetail svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.courseFeatures {
+  margin-bottom: 25px;
+}
+
+.courseFeatures h4 {
+  font-family: var(--font-bebas-neue);
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.courseFeatures ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.courseFeatures li {
+  color: #ccc;
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.courseFeatures li::before {
+  content: "✓";
+  color: var(--accent-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.courseFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  gap: 15px;
+}
+
+.coursePrice {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  letter-spacing: 0.5px;
+}
+
+.courseFooter .btn-primary {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* --- Clock, Location, Calendar Icons --- */
+.clockIcon, .locationIcon, .calendarIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-color);
+}
+
+/* --- Past Workshops Section --- */
+.pastWorkshops {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workshopsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.workshopCard {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.workshopCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.workshopImage {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderImage {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 215, 0, 0.2);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-color);
+}
+
+.workshopOverlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.workshopCountry {
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.workshopContent {
+  padding: 25px;
+}
+
+.workshopTitle {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.workshopDescription {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.workshopMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workshopDetail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f5f5f5;
+  font-size: 0.9rem;
+}
+
+.workshopDetail svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+/* --- Tutorials Section --- */
+.tutorials {
+  padding: 80px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutorialsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.tutorialCard {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tutorialCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.tutorialVideo {
+  position: relative;
+  height: 180px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoPlaceholder {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 215, 0, 0.2);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoPlaceholder .playIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-color);
+}
+
+.videoDuration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.tutorialContent {
+  padding: 20px;
+}
+
+.tutorialTitle {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.tutorialDescription {
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.tutorialMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+
+.videoViews {
+  color: #888;
+}
+
+.videoPlatform {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.tutorialTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background-color: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: var(--accent-color);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tutorialsFooter {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05));
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+}
+
+.tutorialsFooter p {
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.socialButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.socialButtons .btn-primary {
+  padding: 12px 25px;
+  font-size: 1rem;
+  min-width: 180px;
+}
+
+/* --- Contact Section --- */
+.contact {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactForm {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #f5f5f5;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm select:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.contactForm select {
+  cursor: pointer;
+}
+
+.contactForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contactForm .btn-primary {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.contactInfo {
+  margin-top: 40px;
+}
+
+.contactInfo p {
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.contactMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contactMethods a,
+.contactMethods span {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contactMethods a:hover {
+  color: #fff;
+}
+
+.contactMethods span {
+  color: #ccc;
+}
+
+/* --- Tablet Styles --- */
+@media (min-width: 768px) {
+  .pageTitle {
+    font-size: 4.5rem;
+  }
+
+  .pageSubtitle {
+    font-size: 1.8rem;
+  }
+
+  .heroStats {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 600px;
+  }
+
+  .statNumber {
+    font-size: 2.5rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .courseDetails {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .workshopsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workshopMeta {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tutorialsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .socialButtons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .formRow {
+    flex-direction: row;
+  }
+
+  .formRow input,
+  .formRow select {
+    flex: 1;
+  }
+
+  .contactMethods {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+/* --- Desktop Styles --- */
+@media (min-width: 1024px) {
+  .pageTitle {
+    font-size: 5rem;
+  }
+
+  .hero {
+    padding: 100px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 3.5rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .featureCard {
+    padding: 35px;
+  }
+
+  .featureIcon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .coursesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tutorialsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contactForm {
+    padding: 40px;
+  }
+}

@@ -1,0 +1,174 @@
+/* --- Mobile First Styles --- */
+.navbar {
+  width: 100%;
+  padding: 10px 0;
+  background-color: transparent; /* Transparent by default */
+  border-bottom: 1px solid transparent; /* Transparent border */
+  position: fixed; /* Changed to fixed for floating effect */
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.navbar.scrolled {
+  background-color: #1a1a1a; /* Solid on scroll */
+  border-bottom: 1px solid #333;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.brand {
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.brand:hover {
+  transform: scale(1.1);
+}
+
+.desktopNavLinks {
+  display: none;
+}
+
+.mobileInstagramIcon {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.mobileInstagramIcon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.line {
+  width: 2rem;
+  height: 0.25rem;
+  background: var(--accent-color);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.line1_open { transform: rotate(45deg); }
+.line2_open { opacity: 0; transform: translateX(20px); }
+.line3_open { transform: rotate(-45deg); }
+
+.mobileNavPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background: #1a1a1a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobileNavLink {
+  font-family: var(--font-bebas-neue);
+  font-size: 2rem;
+  color: #f5f5f5;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.instagramIcon svg {
+  stroke: #f5f5f5;
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+
+.instagramIcon:hover svg {
+  stroke: var(--accent-color);
+  transform: scale(1.2);
+}
+
+
+/* --- Desktop Styles --- */
+@media (min-width: 769px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* 1. Center the whole group */
+    align-items: center;
+    transform: translateX(-45px); /* 2. Shift left by half logo width (90px / 2) */
+  }
+
+  .brand {
+    /* Reset any special positioning */
+  }
+
+  .mobileInstagramIcon {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .desktopNavLinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 50px; /* 3. Create the desired space */
+  }
+
+  .navLink {
+    font-family: var(--font-bebas-neue);
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .navLink:hover {
+    color: var(--accent-color);
+  }
+
+  .portalLink {
+    background-color: var(--accent-color);
+    color: #1a1a1a;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+
+  .portalLink:hover {
+    background-color: #fff;
+    color: #1a1a1a;
+  }
+
+  .mobileNavPanel {
+    display: none;
+  }
+}

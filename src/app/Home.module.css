@@ -1,0 +1,349 @@
+/* --- Mobile First Styles --- */
+
+/* --- General Section Styles --- */
+.sectionTitle {
+  font-family: var(--font-bebas-neue);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 90vh;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.heroContent {
+  z-index: 1;
+}
+
+.title {
+  font-family: var(--font-bebas-neue);
+  font-size: 4.5rem;
+  color: var(--accent-color);
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  margin: 10px 0 20px;
+}
+
+/* --- Awards Section --- */
+.awards {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.awardItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trophyIcon {
+  stroke: var(--accent-color);
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.awardText {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.2rem;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+
+.ctaButton {
+  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 5px;
+}
+
+/* --- Manifesto Section --- */
+.manifesto {
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+}
+
+.manifestoImage {
+  width: 100%;
+  height: 400px;
+}
+
+.manifestoVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manifestoContent {
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.manifestoContent p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* --- Featured Services Section --- */
+.featuredServices {
+  padding: 40px 5%;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.serviceCard {
+  text-align: center;
+}
+
+.serviceIcon {
+  stroke: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.serviceCard h3 {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.serviceCard p {
+  color: #aaa;
+  line-height: 1.5;
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+  padding: 40px 5%;
+  background-color: #111;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.testimonialCard {
+  background-color: #222;
+  padding: 20px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.testimonialCard p {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.testimonialCard h4 {
+  text-align: right;
+  color: var(--accent-color);
+}
+
+/* --- Featured JC Reyes Section --- */
+.featuredJCReyes {
+  padding: 40px 5%;
+  background-color: #111;
+  text-align: center;
+}
+.featuredJCReyesWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.featuredJCReyesVideo {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+/* --- Gallery Section --- */
+.gallery {
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.galleryTitle {
+  font-family: var(--font-bebas-neue);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.galleryItem {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover {
+  transform: scale(1.05);
+}
+
+.galleryItemWrapper {
+  position: relative;
+  overflow: hidden; /* To keep the badge contained */
+}
+
+.highlightBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--accent-color);
+  color: #121212;
+  padding: 8px 15px;
+  font-family: var(--font-bebas-neue);
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  z-index: 10;
+  transform: rotate(7deg);
+  animation: pulse 2s infinite;
+  border: 2px solid #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+  }
+}
+
+
+/* --- Tablet and Desktop Styles --- */
+@media (min-width: 769px) {
+  .hero {
+    min-height: 80vh;
+  }
+
+  .title {
+    font-size: 8rem;
+    letter-spacing: 5px;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .awards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .awardText {
+    font-size: 1.3rem;
+  }
+
+  .ctaButton {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+
+  .manifesto {
+    flex-direction: row;
+  }
+
+  .manifestoImage, .manifestoContent {
+    width: 50%;
+  }
+
+  .manifestoContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+  }
+
+  .servicesGrid, .testimonialsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery {
+    padding: 40px 10%;
+  }
+
+  .galleryTitle {
+    font-size: 3rem;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featuredJCReyesVideo {
+    max-width: 650px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
