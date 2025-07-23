@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import styles from './Home.module.css';
-import Image from 'next/image';
 import BooksyCredentials from './components/BooksyCredentials';
 import BooksyTestimonials from './components/BooksyTestimonials';
 
@@ -47,19 +46,26 @@ const TrophyIcon = () => (
   </svg>
 );
 
+const VideoPlaceholder = ({ title }: { title: string }) => (
+  <div className={styles.videoPlaceholder}>
+    <div className={styles.playIcon}>▶</div>
+    <p>{title}</p>
+  </div>
+);
 
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
       <section className={styles.hero}>
-        <video autoPlay loop muted className={styles.videoBackground}>
-          <source src="/video1.mp4" type="video/mp4" />
-          Tu navegador no soporta vídeos HTML5.
-        </video>
+        <div className={styles.heroPlaceholder}>
+          <div className={styles.heroVideo}>
+            <VideoPlaceholder title="Video Principal Klandestino" />
+          </div>
+        </div>
         <div className={styles.videoOverlay}></div>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>KLANDESSTINO</h1>
+          <h1 className={styles.title}>KLANDESTINO</h1>
           <p className={styles.subtitle}>Creamos el mejor estilo para ti.</p>
           <div className={styles.awards}>
             <div className={styles.awardItem}>
@@ -88,7 +94,7 @@ export default function Home() {
       {/* Manifesto Section */}
       <section className={styles.manifesto}>
         <div className={styles.manifestoImage}>
-          <video src="/video8.mp4" muted className={styles.manifestoVideo}></video>
+          <VideoPlaceholder title="Video Manifiesto" />
         </div>
         <div className={styles.manifestoContent}>
           <h2 className={styles.sectionTitle}>Manifiesto Klandestino</h2>
@@ -125,7 +131,7 @@ export default function Home() {
       <section className={styles.featuredJCReyes}>
         <h2 className={styles.sectionTitle}>Klandestino x JC Reyes</h2>
         <div className={styles.featuredJCReyesWrapper}>
-          <video src="/video7.mp4" controls className={styles.featuredJCReyesVideo}></video>
+          <VideoPlaceholder title="Colaboración con JC Reyes - Video Destacado" />
         </div>
       </section>
 
@@ -133,12 +139,12 @@ export default function Home() {
       <section className={styles.gallery}>
         <h2 className={styles.galleryTitle}>Últimos Trabajos</h2>
         <div className={styles.galleryGrid}>
-          <video src="/video2.mp4" autoPlay loop muted className={styles.galleryItem}></video>
-          <video src="/video3.mp4" autoPlay loop muted className={styles.galleryItem}></video>
-          <video src="/video4.mp4" autoPlay loop muted className={styles.galleryItem}></video>
-          <video src="/video5.mp4" autoPlay loop muted className={styles.galleryItem}></video>
-          <video src="/video6.mp4" autoPlay loop muted className={styles.galleryItem}></video>
-          <video src="/video8.mp4" autoPlay loop muted className={styles.galleryItem}></video>
+          <VideoPlaceholder title="Trabajo 1" />
+          <VideoPlaceholder title="Trabajo 2" />
+          <VideoPlaceholder title="Trabajo 3" />
+          <VideoPlaceholder title="Trabajo 4" />
+          <VideoPlaceholder title="Trabajo 5" />
+          <VideoPlaceholder title="Trabajo 6" />
         </div>
       </section>
     </div>
